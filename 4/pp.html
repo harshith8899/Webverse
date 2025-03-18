@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Screen Studio Landing Page</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+  }
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+  }
+  .navbar a.download {
+    background-color: purple;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  .hero {
+    text-align: center;
+    margin-top: 100px;
+  }
+  .hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  .cta-button {
+    background-color: purple;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .image-section {
+    text-align: center;
+    margin-top: 40px;
+  }
+  .image-section img {
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+  }
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">Screen Studio</div>
+    <div>
+      <a href="#">Product</a>
+      <a href="#">Help</a>
+      <a href="#">Pricing</a>
+      <a href="#">Twitter</a>
+      <a href="#" class="download">Download</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <h1>Beautiful Screen Recordings in Minutes</h1>
+    <p>Screen Recorder producing high-impact videos automatically. Designed for macOS.</p>
+    <button class="cta-button">Try Screen Studio for free</button>
+  </div>
+
+  <div class="image-section">
+    <img src="screenshot.png" alt="Screen Studio Screenshot">
+  </div>
+
+</body>
+</html>

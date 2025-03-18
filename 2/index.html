@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebStart</title>
+    <link rel="icon" href="/assets/favicon.jpg" type="image/jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="typewriter">
+        <div>
+            <p>Welcome:)</p>
+        </div>
+    </div>
+    <header>
+        <div class="main">
+            <div class="braces">{ </div> <span class="text-transition">Web-<span class="strike-through"><span
+                        class="rotate-text">SITE</span></span></span>
+            <div class="braces"> }</div>
+        </div>
+    </header>
+
+    <div id="content">
+        <!-- Placeholder content to enable scrolling -->
+        <div style="height: 100vh;"></div>
+    </div>
+    <div class="grid-wrapper">
+        <div class="grid-container">
+            <div class="grid-item grid-item-1">
+                <h1>&lt</h1>
+                <h1>Web Development</h1>
+                <p >Introduction to Modern Web Technologies</p>
+            </div>
+            <div class="grid-item grid-item-2">
+                <div class="chat-container" id="chatContainer">
+                    <div class="chat-message">Hey, did you hear? There’s a new WebStart workshop coming up! 🚀</div>
+                    <div class="chat-message right">No way! What’s that about? Sounds cool!</div>
+                    <div class="chat-message">It starts on August 27th! It’s a 7-day crash course in web development.
+                        🖥️✨</div>
+                    <div class="chat-message right">We’ll learn to use tools like VS Code, Git, and GitHub, plus HTML,
+                        CSS, and JavaScript. Come join the fun! 😎</div>
+                </div>
+                <audio id="notification-sound" src="/assets/notification.mp3"></audio>
+                <!-- Placeholder for chat functionality -->
+            </div>
+            <div class="grid-item grid-item-3">
+                <h2>Things You Learn</h2>
+                <div class="img-container">
+                    <div class="tooltip">
+                    <img src="../assets/icon-html.svg" alt="HTML">
+                    <span class="tooltiptext">HTML</span>
+                    </div>
+                    <div class="tooltip">
+                    <img src="../assets/icon-css.svg" alt="CSS">
+                    <span class="tooltiptext">CSS</span>
+                    </div>
+                    <div class="tooltip">
+                    <img src="../assets/javascript.svg" alt="JavaScript">
+                    <span class="tooltiptext">JS</span>
+                    </div>
+                    <div class="tooltip">
+                    <img src="../assets/vscode.svg" alt="VS Code">
+                    <span class="tooltiptext">VSCODE</span>
+                    </div>
+                    <div class="tooltip">
+                    <img src="../assets/github.svg" alt="GitHub">
+                    <span class="tooltiptext">GITHUB</span>
+                    </div>
+                    <div class="tooltip">
+                    <img src="../assets/linkedin.svg" alt="LinkedIn">
+                    <span class="tooltiptext">LINKEDIN</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item grid-item-4">
+                <h2>When</h2>
+                <p>Aug 27th to Sept 3rd</p>
+                <p>7 days Intensive Course</p><br>
+                <h2>Venue</h2>
+                <p>AV Room</p>
+            </div>
+            <div class="grid-item grid-item-5">
+                <h1>WEB-Start</h1>
+                <p>&ltStart your Web Journey&gt</p>
+            </div>
+            <div class="grid-item grid-item-6">
+                <h1>Register Now</h1>
+                <!--<button onclick="navigateToPage()">Join</button>-->
+            </div>
+            <div class="grid-item grid-item-7">
+                <h2>D Day</h2>
+                <p>in:</p>
+                <h1 id="countdown"></h1>
+                <h1>&gt</h1>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <p>For any Queries Contact: Himateju V 6366145580 & Harshith S 6363713736</p>
+        <!-- Placeholder content to enable scrolling -->
+        <div style="height: 20vh;"></div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function animateChat() {
+            const messages = document.querySelectorAll('.chat-message');
+            const audio = document.getElementById('notification-sound');
+
+            // Play the sound when animation starts
+            if (audio) {
+                audio.play().catch(error => console.error("Audio playback failed:", error));
+            }
+
+            messages.forEach((msg, index) => {
+                setTimeout(() => {
+                    msg.style.opacity = '1';
+                }, index * 1000);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Delay the execution of animateChat by 5 seconds
+            setTimeout(() => {
+                animateChat();
+            }, 5000); // 5000 milliseconds = 5 seconds
+
+            // Countdown logic
+            const countdownElement = document.getElementById('countdown');
+            const targetDate = new Date('August 27, 2024').getTime();
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const timeLeft = targetDate - now;
+                const daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+
+                countdownElement.textContent = daysLeft + ' days';
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000 * 60 * 60 * 24); // Update every day
+        });
+
+        function navigateToPage() {
+            window.location.href = '/registration/register.html'; // Replace 'your-page.html' with the URL of the page you want to navigate to
+        }
+    </script>
+</body>
+
+</html>
