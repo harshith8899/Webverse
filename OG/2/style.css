@@ -27,7 +27,8 @@ body {
     background-color: #fdf8ed;
     z-index: 1000;
     animation: hide 1s 3s forwards;
-    /* Automatically hides after animation */
+    /* BUG 1: The hide animation starts after 3 seconds, but the typing animation only lasts 1 second.
+       This might cause the text to disappear before the user can read it. */
 }
 
 .typewriter p {
@@ -90,7 +91,6 @@ header {
         z-index: -1;
     }
 }
-
 
 .text-transition {
     font-weight: bold;
@@ -263,6 +263,8 @@ button:hover {
             "box1" "box2" "box3"
             "box4" "box5" "box6"
             "box7";
+        /* BUG 3: The grid-template-areas syntax is incorrect. Each row should be enclosed in quotes,
+           and areas should be separated by spaces, not individual quotes. */
     }
     .strike-through::after {
         height: 1px;
@@ -272,6 +274,8 @@ button:hover {
 .chat {
     grid-column: span 2;
     grid-row: span 1;
+    /* BUG 2: The .chat class is not assigned a grid-area in the grid-template-areas,
+       so it won't be properly placed in the grid layout. */
 }
 
 .chat-container {
@@ -296,8 +300,6 @@ button:hover {
     color: #151616
 }
 
-
-
 .tooltip {
     position: relative;
     display: inline-block;
@@ -312,7 +314,6 @@ button:hover {
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
-    /* Position the tooltip */
     position: absolute;
     z-index: 1;
 }
@@ -321,7 +322,7 @@ button:hover {
     visibility: visible;
 }
 
-#content{
+#content {
     display: flex;
     justify-content: center;
     align-items: center;

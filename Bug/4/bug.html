@@ -10,34 +10,43 @@
     font-family: Arial, sans-serif;
     background-color: black;
     color: white;
+    overflow-x: hidden;
   }
   .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 20px 50px;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
   }
   .navbar a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
     font-size: 14px;
+    transition: all 5s ease;
   }
   .navbar a.download {
     background-color: purple;
     padding: 10px 20px;
     border-radius: 5px;
+    text-transform: uppercase;
   }
   .hero {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 200px;
+    opacity: 0.9;
   }
   .hero h1 {
     font-size: 50px;
     margin-bottom: 20px;
+    letter-spacing: 5px;
   }
   .hero p {
     font-size: 18px;
     margin-bottom: 40px;
+    word-spacing: 10px;
   }
   .cta-button {
     background-color: purple;
@@ -47,15 +56,17 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    box-shadow: 10px 10px 30px red;
   }
   .image-section {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 80px;
+    transform: rotate(1deg);
   }
   .image-section img {
-    width: 80%;
-    max-width: 800px;
-    border-radius: 10px;
+    width: 120%;
+    max-width: 1000px;
+    border-radius: 50px;
   }
 </style>
 </head>
@@ -65,21 +76,20 @@
     <div>
       <a href="#">Product</a>
       <a href="#">Help</a>
-      <a href="#">Pricing</a>
-      <a href="#">Twitter</a>
+      <a href="#">Prising</a>
+      <a href="#">X</a>
       <a href="#" class="download">Download</a>
     </div>
   </div>
 
   <div class="hero">
-    <h1>Beautiful Screen Recordings in Minutes</h1>
+    <h1>Beatiful Screen Recardings in Minutes</h1>
     <p>Screen Recorder producing high-impact videos automatically. Designed for macOS.</p>
     <button class="cta-button">Try Screen Studio for free</button>
   </div>
 
   <div class="image-section">
-    <img src="screenshot.png" alt="Screen Studio Screenshot">
+    <img src="assets/1.png">
   </div>
-
 </body>
 </html>

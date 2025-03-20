@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlapping Text Effect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li>Our Work</li>
+                <li>Features</li>
+                <li>Scope of Work</li>
+                <li>Plans</li>
+                <li>FAQs</li>
+            </ul>
+            <button class="login-btn">Log in</button>
+            <button class="subscribe-btn">Subscribe</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1 class="overlapping-text">
+            <span class="layer1">Your all-in-one</span>
+            <span class="layer2">design solution</span>
+            <span class="layer3">under one subscription.</span>
+        </h1>
+        <p class="quote">
+            "They absolutely crush all requests. Every design has been spot on!"<br> 
+            - Octav Cristea, Managing Partner @ Nexus Media
+        </p>
+        <button class="cta-btn">See plans <span>2 spots available</span></button>
+    </section>
+
+</body>
+
+<style>
+    /* General Styling */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        color: white;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        background-color: black;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    button {
+        background-color: yellow;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    /* Overlapping Text Effect */
+    .hero {
+        position: relative;
+        text-align: center;
+        margin: 100px auto;
+        max-width: 600px;
+    }
+
+    .overlapping-text {
+        font-size: 50px;
+        font-weight: bold;
+        line-height: 1.1;
+        position: relative;
+    }
+
+    .overlapping-text span {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+    }
+
+    .layer1 {
+        top: -20px;
+        color: rgba(255, 255, 0, 0.8);
+    }
+
+    .layer2 {
+        top: 10px;
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .layer3 {
+        top: 40px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Quote and Button */
+    .quote {
+        font-size: 18px;
+        margin-top: 80px;
+    }
+
+    .cta-btn {
+        margin-top: 20px;
+        font-size: 18px;
+        padding: 15px 30px;
+        background-color: yellow;
+        border-radius: 5px;
+    }
+
+    /* Hover Animation */
+    .cta-btn:hover {
+        background-color: orange;
+        transition: 0.3s ease;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+        .overlapping-text {
+            font-size: 36px;
+        }
+
+        .layer1 { top: -10px; }
+        .layer2 { top: 5px; }
+        .layer3 { top: 20px; }
+    }
+</style>
+
+</html>
