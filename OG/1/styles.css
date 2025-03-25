@@ -48,13 +48,13 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    display: flex;
+    display: flex;/*flex*/
     align-items: center;
     justify-content: center;
     padding: 40px;
     background: #222;
     margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: 10px;/*border radius*/
 }
 
 .movie-banner img {
@@ -170,12 +170,12 @@ footer {
 }
 
 .footer-info {
-    text-align: center;
+    text-align: center;/*align*/
 }
 
 .footer-bottom p {
     text-align: center;
-    font-size: 12px;
+    font-size: 12px;/*size*/
     color: #bbb;
     margin-top: 10px;
 }
